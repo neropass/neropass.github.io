@@ -10,6 +10,8 @@
     <meta name="robots" content="all">
     <meta property='og:title' content="Это моя первая страница...">
     <title>Дмитрий Мещеряков - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <nav class="navigation">
             <div class="logo">Дмитрий Мещеряков</div>
             <div class="menu">
-                <ul class="navigation">
+                <ul class="navigation__buttons">
 
                     <li>Обо мне</li>
                     <li>Услуги</li>
@@ -40,199 +42,231 @@
             <h4 class="title__text">Фулл стек веб-разработчик</h4>
             <input class="about-me__download" type="submit" value="Обо мне">
             <input class="my-works__download" type="submit" value="Мои работы">
-            <img class="title__background" src="#" alt="Здесь бэкграунд с фото">
-        </div>
-
-        <div class="bio__container">
-            <h2 class="bio__title">Обо мне</h2>
-            <img src="" alt="" class="bio__img">
-            <p class="bio__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestias pariatur
-                ab hic, ea dolore quas labore laboriosam perspiciatis alias? <br><br> Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Laboriosam ullam quaerat facilis incidunt nulla voluptas alias odit,
-                accusamus soluta quidem.</p>
-            <input class="bio__download" type="submit" value="Скачать резюме">
-        </div>
-
-        <div class="skills__container">
-
-            <h2 class="titles">Что я умею</h2>
-
-            <ul class="skills__boxes">
-
-                <li>
-                    <img src="#" alt="#" class="skills1__img">
-                    <h3 class="skills__boxes-names">Веб-дизайн</h3>
-                    <p class="boxes__descriptions">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                        voluptatum commodi impedit ab vitae tempora.</p>
-                </li>
-
-                <li>
-                    <img src="#" alt="#" class="skills1__img">
-                    <h3 class="skills__boxes-names">Веб-дизайн</h3>
-                    <p class="boxes__descriptions">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                        voluptatum commodi impedit ab vitae tempora.</p>
-                </li>
-
-                <li>
-                    <img src="#" alt="#" class="skills1__img">
-                    <h3 class="skills__boxes-names">Веб-дизайн</h3>
-                    <p class="boxes__descriptions">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                        voluptatum commodi impedit ab vitae tempora.</p>
-                </li>
-
-                <li>
-                    <img src="#" alt="#" class="skills1__img">
-                    <h3 class="skills__boxes-names">Веб-дизайн</h3>
-                    <p class="boxes__descriptions">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                        voluptatum commodi impedit ab vitae tempora.</p>
-                </li>
-
-            </ul>
 
         </div>
+    </div>
+    <div class="bio__container">
+        <h2 class="bio__title">Обо мне</h2>
+        <div class="bio__text-box">
+            <p class="bio__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+                ornare
+                diam. Sed commodo nibh ante
+                facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh. <br><br><br>
+                Lorem
+                ipsum
+                dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+        </div>
+        <input class="bio__download" type="submit" value="Скачать резюме">
+    </div>
 
-        <div class="cases__container">
+    <div class="skills__container">
 
-            <h2 class="titles">Кейсы</h2>
-            <span class="casses__undertext"></span>
-            <img src="#" alt="#" class="casses__imgs">
-            <div class="client__container">
+        <h2 class="titles">Что я умею</h2>
 
+        <ul class="skills__boxes">
+
+            <li>
+                <img src="./img/laptop.png" alt="#" class="skills__img">
+                <h3 class="skills__boxes-names">Веб-дизайн</h3>
+                <p class="boxes__descriptions">Lorem ipsum dolor sit amet placerat
+                    facilisis felis mi in tempus eleifend
+                    pellentesque natoque etiam. </p>
+            </li>
+
+            <li>
+                <img src="./img/slash.png" alt="#" class="skills__img">
+                <h3 class="skills__boxes-names">Разработка</h3>
+                <p class="boxes__descriptions">Lorem ipsum dolor sit amet placerat
+                    facilisis mi in tempus eleifend
+                    pellentesque.</p>
+            </li>
+
+            <li>
+                <img src="./img/rocket.png" alt="#" class="skills__img">
+                <h3 class="skills__boxes-names">СЕО-оптимизация</h3>
+                <p class="boxes__descriptions">Lorem ipsum dolor sit amet placerat
+                    facilisis felis mi in tempus eleifend
+                    pellentesque natoque etiam.</p>
+            </li>
+
+            <li>
+                <img src="./img/gramophone.png" alt="#" class="skills__img">
+                <h3 class="skills__boxes-names">Маркетинг</h3>
+                <p class="boxes__descriptions">Lorem ipsum dolor sit amet placerat
+                    facilisis felis mi in tempus eleifend
+                    pellentesque natoque .</p>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="cases__container">
+
+        <h2 class="titles">Кейсы</h2>
+        <p class="casses__undertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo
+            nec ornare diamcoccodo nibh ante facilisis.</p>
+        <img src="./img/case-example.jpg" alt="#" class="casses__imgs">
+        <div class="client__container">
+            <div class="client__box">
                 <h3 class="client">Client</h3>
                 <p class="client__name">Компания</p>
                 <h3 class="client">Website</h3>
                 <p class="client__name">https://www.randomdomain.com</p>
-                <h3 class="project__name">Название проекта</h3>
-                <p class="project__discription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-                    suscipit natus non voluptate aperiam nisi veritatis quis velit facere facilis, debitis ducimus
-                    deserunt pariatur impedit libero, beatae aliquid tempore laudantium!</p>
-
+                <input class="project__link" type="submit" value="Visit live site">
             </div>
-            <input class="project__link" type="submit" value="Visit live site">
+            <h3 class="project__name">Название проекта</h3>
+            <p class="project__discription">Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
 
         </div>
 
-        <div class="price__container">
-
-            <h2 class="titles">Расчёт стоимости</h2>
-
-            <div class="price__inputs">
-                <span class="price__input-names">Тип сайта</span>
-                <input class="site__list" type="text" placeholder="Выберете пункт...">
-
-
-                <span class="price__input-names">Дизайн</span>
-                <input class="site__list" type="text" placeholder="Выберете пункт...">
-
-
-                <span class="price__input-names">Адаптивность</span>
-                <input class="site__list" type="text" placeholder="Выберете пункт...">
-            </div>
-            <div class="price__info">
-                <span class="price__info-text">Сроки</span>
-                <span class="price__info-text">0</span>
-                <span class="price__info-text">Сроки</span>
-                <span class="price__info-text">0</span>
-            </div>
-
-        </div>
-
-        <div class="stats__container">
-
-            <h2 class="titles">Немного статистики</h2>
-
-            <div class="stats__boxes">
-
-                <div class="stats__box">
-                    <img src="#" alt="#" class="stats__img">
-                    <span class="stats__number">120</span>
-                    <span class="stats__text">Счастливых клиентов</span>
-                </div>
-
-                <div class="stats__box">
-                    <img src="#" alt="#" class="stats__img">
-                    <span class="stats__number">4600</span>
-                    <span class="stats__text">Часов работы</span>
-                </div>
-
-                <div class="stats__box">
-                    <img src="#" alt="#" class="stats__img">
-                    <span class="stats__number">340</span>
-                    <span class="stats__text">Проектов завершено</span>
-                </div>
-
-                <div class="stats__box">
-                    <img src="#" alt="#" class="stats__img">
-                    <span class="stats__number">23</span>
-                    <span class="stats__text">Наград получено</span>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="reviews__container">
-
-            <h2 class="titles">Отзывы</h2>
-            <img src="#" alt="#" class="reviews__img">
-            <p class="reviews__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium ea nisi
-                obcaecati ipsam dolorem? Tenetur mollitia accusamus tempora cumque iusto sit quaerat vitae, tempore
-                incidunt possimus autem placeat voluptate.</p>
-            <p class="reviewer"> <b>Михаил</b>, Ген директор ПАО "Газпром".</p>
-            <input type="radio" name="reviewer__choice">
-            <input type="radio" name="reviewer__choice">
-            <input type="radio" name="reviewer__choice">
-        </div>
-
-        <div class="contacts__container">
-
-            <h2 class="titles">Мои контакты</h2>
-            <span class="contacts__text"></span>
-            <div class="contacts__boxes">
-
-                <div class="contacts__box">
-                    <img src="#" alt="#" class="contacts__img">
-                    <p class="contacts__box-text">Санкт-Петербург <br>Невский проспект, 11</p>
-                </div>
-
-                <div class="contacts__box">
-                    <img src="#" alt="#" class="contacts__img">
-                    <p class="contacts__box-text">info@companyname.com</p>
-                </div>
-
-                <div class="contacts__box">
-                    <img src="#" alt="#" class="contacts__img">
-                    <p class="contacts__box-text">+7999999999</p>
-                </div>
-
-            </div>
-            <h3 class="contacts__message">Оставьте мне сообщение</h3>
-            <div class="contacts__inputs">
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Сообщение">
-            </div>
-            <input type="submit" value="Отправить">
-            <div class="contacts__social">
-                <img src="#" alt="#" class="social__img">
-                <img src="#" alt="#" class="social__img">
-                <img src="#" alt="#" class="social__img">
-                <img src="#" alt="#" class="social__img">
-                <img src="#" alt="#" class="social__img">
-                <img src="#" alt="#" class="social__img">
-            </div>
-
-        </div>
-
-        <div class="map__integration">
-
-        </div>
-
-        <footer class="footer">
-            <span class="footer__text">Copyright&#169; 2021 Дмитрий Мещеряков. Design by Web</span>
-        </footer>
 
     </div>
+
+    <div class="price__container">
+
+        <h2 class="titles">Расчёт стоимости</h2>
+
+        <div class="price__inputs">
+
+            <div class="price__selections">
+                <span class="price__select-names">Тип сайта</span><br>
+                <select class="price__selects">
+                    <option value="0">Выберите пункт</option>
+                </select>
+            </div>
+
+            <div class="price__selections">
+                <span class="price__select-names">Дизайн</span><br>
+                <select class="price__selects">
+                    <option value="0">Выберите пункт</option>
+                </select>
+            </div>
+
+            <div class="price__selections">
+                <span class="price__select-names">Адаптивность</span><br>
+                <select class="price__selects">
+                    <option value="0">Выберите пункт</option>
+                </select>
+            </div>
+            <img src="./img/underline-price.jpg" alt="">
+            <div class="price__final">
+                <div class="price__info-name">
+                    <span class="times">Сроки</span><br><br>
+                    <span class="price">Стоимость</span>
+                </div>
+                <div class="price__info-number">
+                    <span class="times__number">0</span><br><br>
+                    <span class="price__numer">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats__container">
+
+        <h2 class="titles">Немного статистики</h2>
+
+        <div class="stats__boxes">
+
+            <div class="stats__box">
+                <img src="./img/smile.png" alt="#" class="stats__img">
+                <p class="stats__number">120</p>
+                <p class="stats__text">Счастливых клиентов</p>
+            </div>
+
+            <div class="stats__box">
+                <img src="./img/slash-orange.png" alt="#" class="stats__img">
+                <p class="stats__number">4600</p>
+                <p class="stats__text">Часов работы</p>
+            </div>
+
+            <div class="stats__box">
+                <img src="./img/arrow.png" alt="#" class="stats__img">
+                <p class="stats__number">340</p>
+                <p class="stats__text">Проектов завершено</p>
+            </div>
+
+            <div class="stats__box">
+                <img src="./img/cup.png" alt="#" class="stats__img">
+                <p class="stats__number">23</p>
+                <p class="stats__text">Наград получено</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="reviews__container">
+
+        <h2 class="titles">Отзывы</h2>
+        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+            ornare diam. Sed commodo nibh ante
+            facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+        <p class="reviewer"> <b>Михаил</b>, Ген директор ПАО "Газпром".</p>
+        <div class="choice__box">
+            <input type="radio" name="reviewer__choice">
+            <input type="radio" name="reviewer__choice">
+            <input type="radio" name="reviewer__choice">
+        </div>
+    </div>
+
+    <div class="contacts__container">
+
+        <h2 class="titles">Мои контакты</h2>
+        <p class="contacts__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec
+            ornare diamcoccodo </p>
+        <div class="contacts__boxes">
+
+            <div class="contacts__box">
+                <img src="./img/geo.png" alt="#" class="contacts__img">
+                <p class="contacts__box-text">Санкт-Петербург <br>Невский проспект, 11</p>
+            </div>
+
+            <div class="contacts__box">
+                <img src="./img/mail.png" alt="#" class="contacts__img">
+                <p class="contacts__box-text">info@companyname.com</p>
+            </div>
+
+            <div class="contacts__box">
+                <img src="./img/phone.png" alt="#" class="contacts__img">
+                <p class="contacts__box-text">+7 999 999-99-99</p>
+            </div>
+
+        </div>
+        <h3 class="contacts__message">Оставьте мне сообщение</h3>
+        <div class="contacts__inputs">
+            <input type="text" placeholder="Имя" class="contacts__name">
+            <input type="text" placeholder="Email" class="contacts__email">
+            <textarea cols="30" rows="10" placeholder="Сообщение" class="contacts__msg"></textarea>
+        </div>
+        <input type="submit" value="Отправить" class="contacts__button">
+        <div class="contacts__social">
+            <!-- <img src="#" alt="#" class="social__img">
+            <img src="#" alt="#" class="social__img">
+            <img src="#" alt="#" class="social__img">
+            <img src="#" alt="#" class="social__img">
+            <img src="#" alt="#" class="social__img">
+            <img src="#" alt="#" class="social__img"> -->
+        </div>
+
+    </div>
+
+    <div class="map__integration">
+
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">Copyright&#169; 2021 Дмитрий Мещеряков. Design by Web</p>
+    </footer>
+
+
 
 </body>
 
