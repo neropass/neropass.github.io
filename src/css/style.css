@@ -194,28 +194,57 @@ main {
     color: #3f495a;
 }
 
-.bio__container input {
+
+
+/* .bio__container input {
     font-size: 15px;
     padding: 7px 7px 7px 30px;
     margin-bottom: 97px;
     border: 2px solid #6d7682;
     background-image: url(../img/download.png);
     background-repeat: no-repeat;
-    background-position: 10px 8px;
+    background-position: 10px 8px; 
     border-radius: 5px;
     color: #6d7682;
     transform: scale(1);
-    transition: all 0.2s ease forwards;
+    transition: all 0.2s ease;
+
+} */
+
+.bio__container button {
+    font-size: 15px;
+    padding: 7px 7px 7px 7px;
+    margin-bottom: 97px;
+    border: 2px solid #6d7682;
+    border-radius: 5px;
+    color: #6d7682;
+    transform: scale(1);
+    transition: all 0.2s ease;
+
 }
 
-.bio__container input:hover {
+.download__button img{
+    padding-top: 1px;
+    padding-right: 3px;
+}
+
+.bio__container button:hover {
+    background: #344051;
+    color: #fff;
+}
+
+.bio__container button:active {
+    transform: scale(1.1);
+}
+
+/* .bio__container input:hover {
     background: #344051;
     color: #fff;
 }
 
 .bio__container input:active {
     transform: scale(1.1);
-}
+} */
 
 
 .skills__container {
@@ -235,7 +264,7 @@ main {
 
 .skills__boxes {
     margin-left: 420px;
-    animation-duration: 3s;
+    animation-duration: 10s;
 }
 
 
@@ -574,9 +603,9 @@ main {
     background: #e0e0e0;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
-  }
-  
-  .preloader__row {
+}
+
+.preloader__row {
     position: relative;
     top: 50%;
     left: 50%;
@@ -586,9 +615,9 @@ main {
     margin-left: -35px;
     text-align: center;
     animation: preloader-rotate 2s infinite linear;
-  }
-  
-  .preloader__item {
+}
+
+.preloader__item {
     position: absolute;
     display: inline-block;
     top: 0;
@@ -597,37 +626,37 @@ main {
     width: 35px;
     height: 35px;
     animation: preloader-bounce 2s infinite ease-in-out;
-  }
-  
-  .preloader__item:last-child {
+}
+
+.preloader__item:last-child {
     top: auto;
     bottom: 0;
     animation-delay: -1s;
-  }
-  
-  @keyframes preloader-rotate {
+}
+
+@keyframes preloader-rotate {
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @keyframes preloader-bounce {
-  
+}
+
+@keyframes preloader-bounce {
+
     0%,
     100% {
-      transform: scale(0);
+        transform: scale(0);
     }
-  
+
     50% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  .loaded_hiding .preloader {
+}
+
+.loaded_hiding .preloader {
     transition: 0.3s opacity;
     opacity: 0;
-  }
-  
-  .loaded .preloader {
+}
+
+.loaded .preloader {
     display: none;
-  }
+}
