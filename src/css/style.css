@@ -1,11 +1,14 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
 .navigation {
     width: 100%;
     height: 60px;
     background-color: #344051;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo {
@@ -14,6 +17,19 @@ body {
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .menu {
@@ -28,9 +44,65 @@ body {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
 }
 
-.main {
+.navigation__buttons li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.navigation__buttons li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.navigation__buttons li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.navigation__buttons li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.navigation__buttons li:nth-child(6) {
+    animation-delay: 2s;
+}
+
+.navigation__buttons li a {
+    transition: all 0.1s;
+    color: #fff;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.navigation__buttons li a:visited {
+    color: #fff;
+}
+
+.navigation__buttons li a:hover {
+    color: #e88604;
+
+}
+
+.navigation__buttons li a:active {
+    transform: scale(1.1);
+}
+
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+main {
     width: 100%;
     height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
@@ -42,6 +114,25 @@ body {
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 
 .title__container h1 {
@@ -55,7 +146,6 @@ body {
     color: #79818d;
 }
 
-
 .title__container input {
     height: 40px;
     text-align: center;
@@ -66,6 +156,17 @@ body {
     font-size: 13px;
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.title__container input:hover {
+    background: #344051;
+    color: #fff;
+}
+
+.title__container input:active {
+    transform: scale(1.1);
 }
 
 .bio__container {
@@ -103,7 +204,19 @@ body {
     background-position: 10px 8px;
     border-radius: 5px;
     color: #6d7682;
+    transform: scale(1);
+    transition: all 0.2s ease forwards;
 }
+
+.bio__container input:hover {
+    background: #344051;
+    color: #fff;
+}
+
+.bio__container input:active {
+    transform: scale(1.1);
+}
+
 
 .skills__container {
     background: url(../img/underline-title.png) center 30% no-repeat, url(../img/bg-skills.jpg) center no-repeat;
@@ -122,7 +235,10 @@ body {
 
 .skills__boxes {
     margin-left: 420px;
+    animation-duration: 3s;
 }
+
+
 
 .skills__boxes>li {
     height: 190px;
@@ -248,7 +364,7 @@ body {
     background-position-x: 850px;
 }
 
-.price__final{
+.price__final {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -261,7 +377,7 @@ body {
 .stats__container {
     width: 100%;
     height: 50%;
-    background: url(../img/underline-title.png) center 30% no-repeat, url(../img/bg-stats.jpg) center no-repeat;
+    background: url(../img/underline-title.png) center 30% no-repeat, url(../img/bg-stats.jpg) center no-repeat fixed;
 }
 
 .stats__container h2 {
@@ -274,13 +390,13 @@ body {
 }
 
 .stats__boxes {
-    margin: 126px 0px 0px 140px;
+    margin: 126px 0px 0px 255px;
 }
 
 .stats__box {
     float: left;
     text-align: center;
-    margin-left: 240px;
+    margin-left: 150px;
 }
 
 .stats__number {
@@ -411,7 +527,7 @@ body {
     display: none;
 }
 
-.contacts__button{
+.contacts__button {
     height: 40px;
     text-align: center;
     border: 2px solid #fff;
@@ -421,16 +537,97 @@ body {
     font-size: 13px;
     padding: 0px 16px;
     margin: 20px 14px 0px 897px;
+    transform: scale(1);
+    transition: all 0.2s;
 }
 
-.footer{
+.contacts__button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.contacts__button:active {
+    transform: scale(1.1);
+}
+
+.footer {
     width: 100%;
     height: 95px;
     background: #354051;
 }
 
-.footer__text{
+.footer__text {
     text-align: center;
     padding-top: 40px;
     color: #fff;
 }
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
