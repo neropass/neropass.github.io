@@ -1,22 +1,41 @@
+@font-face {
+    font-family: 'FranklinGot';
+    src: url('../fonts/framd.eot');
+    src: local('☺'), url('../fonts/framd.woff') format('woff'), url('../fonts/framd.ttf') format('truetype'), url('../fonts/framd.svg') format('svg'),;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'FranklinBook';
+	src: url('../fonts/Franklin Gothic Book Regular.eot');
+	src: local('☺'), url('../fonts/Franklin Gothic Book Regular.woff') format('woff'), url('../fonts/Franklin Gothic Book Regular.ttf') format('truetype'), url('../fonts/Franklin Gothic Book Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 body {
     font-family: Arial, sans-serif;
+    font-weight: 600;
     background-color: #fff;
 }
 
+.titles{
+    font-family: FranklinGot, sans-serif;
+}
+
 .navigation {
-    width: 100%;
     height: 60px;
     background-color: #344051;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
 }
 
 .logo {
+    font-family: FranklinGot, sans-serif;
+    padding-top: 22px;
+    font-size: 18px;
     color: #fff;
-    font-size: 20px;
-    line-height: 60px;
-    /* padding-left: 388px; */
-    float: left;
     -webkit-animation: comming 2s ease;
     -o-animation: comming 2s ease;
     animation: comming 2s ease;
@@ -33,21 +52,26 @@ body {
 }
 
 .menu {
-    float: left;
-    /* padding-left: 432px; */
+    padding-top: 1px;
 }
 
 .navigation__buttons>li {
     float: left;
     line-height: 60px;
     color: #fff;
-    margin-right: 40px;
+    margin-left: 35px;
     font-size: 14px;
     text-transform: uppercase;
     -webkit-animation: topshift 0.4s ease forwards;
     -o-animation: topshift 0.4s ease forwards;
     animation: topshift 0.4s ease forwards;
+    transform: scale(1);
+    transition: all 0.1s;
     opacity: 0;
+}
+
+.navigation__buttons>li:active{
+    transform: scale(1.1);
 }
 
 .navigation__buttons li:nth-child(2) {
@@ -71,10 +95,9 @@ body {
 }
 
 .navigation__buttons li a {
+    font-family: FranklinGot, sans-serif;
     transition: all 0.1s;
     color: #fff;
-    transform: scale(1);
-    display: inline-block;
     text-decoration: none;
 }
 
@@ -84,11 +107,6 @@ body {
 
 .navigation__buttons li a:hover {
     color: #e88604;
-
-}
-
-.navigation__buttons li a:active {
-    transform: scale(1.1);
 }
 
 @keyframes topshift {
@@ -103,6 +121,10 @@ body {
     }
 }
 
+.nav__menu>a {
+    color: #fff;
+}
+
 main {
     width: 100%;
     height: 100%;
@@ -110,9 +132,8 @@ main {
 }
 
 .title__container {
-    float: left;
+    font-family: 'FranklinGot', sans-serif;
     height: auto;
-    margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
     opacity: 0;
@@ -132,12 +153,13 @@ main {
 
     to {
         opacity: 1;
-        margin-left: 404px;
+        margin-left: 0px;
     }
 }
 
 .title__container h1 {
-    font-size: 60px;
+    width: 100%;
+    font-size: 56px;
     font-weight: bold;
 }
 
@@ -149,7 +171,6 @@ main {
 
 .title__container input {
     height: 40px;
-    text-align: center;
     border: 2px solid #6d7682;
     background: none;
     border-radius: 5px;
@@ -173,9 +194,8 @@ main {
 .bio__container {
     width: 100%;
     padding-top: 108px;
-    text-align: center;
     box-shadow: 0 -40px 44px 1px rgba(0, 0, 0, .2);
-    background: url(../img/underline-title.jpg) center 23% no-repeat, url(../img/boy-small.png) center 45% no-repeat;
+    background: url(../img/boy-small.png) center 45% no-repeat;
 }
 
 .bio__container h2 {
@@ -185,46 +205,40 @@ main {
     color: #263244;
 }
 
-.bio__text-box {
-    margin: 318px 0px 35px 0px;
+.underline {
+    margin: 20px auto 108px auto;
+    width: 74px;
+    height: 4px;
+    background: url(../img/underline-title.png) center no-repeat;
+}
+
+.bio__container .underline {
+    margin-bottom: 30px;
 }
 
 .bio__text {
-    padding: 0px 595px;
-    text-align: left;
+    font-weight: normal;
+    margin-top: 300px;
+    padding-bottom: 36px;
     color: #3f495a;
 }
 
-
-
-/* .bio__container input {
-    font-size: 15px;
-    padding: 7px 7px 7px 30px;
-    margin-bottom: 97px;
-    border: 2px solid #6d7682;
-    background-image: url(../img/download.png);
-    background-repeat: no-repeat;
-    background-position: 10px 8px; 
-    border-radius: 5px;
-    color: #6d7682;
-    transform: scale(1);
-    transition: all 0.2s ease;
-
-} */
-
 .bio__container button {
+    font-family: FranklinBook, sans-serif;
     font-size: 15px;
     padding: 7px 7px 7px 7px;
-    margin-bottom: 97px;
     border: 2px solid #6d7682;
     border-radius: 5px;
     color: #6d7682;
     transform: scale(1);
     transition: all 0.2s ease;
-
 }
 
-.download__button i{
+.download__box {
+    margin-bottom: 97px;
+}
+
+.download__button i {
     padding-right: 3px;
 }
 
@@ -238,35 +252,26 @@ main {
 }
 
 .skills__container {
-    background: url(../img/underline-title.png) center 30% no-repeat, url(../img/bg-skills.jpg) center no-repeat;
+    background: url(../img/bg-skills.jpg) center/cover no-repeat;
     width: 100%;
-    height: 55%;
+    padding-bottom: 50px;
 }
 
 .skills__container h2 {
-    text-align: center;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
     color: #263244;
-    padding: 105px 0px 140px 0px;
+    padding: 105px 0px 0px 10px;
 }
 
 .skills__boxes {
-    margin-left: 420px;
-    animation-duration: 10s;
-}
-
-
-
-.skills__boxes>li {
-    height: 190px;
-    float: left;
-    text-align: center;
-    margin-left: 43px;
+    animation-duration: 3s;
+    
 }
 
 .skills__boxes-names {
+    font-family: Bahnschrift, sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #cf7600;
@@ -274,79 +279,96 @@ main {
 }
 
 .boxes__descriptions {
-    margin: 20px 0px 70px 0px;
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    margin: auto;
     width: 215px;
     color: #3f495a;
 }
 
-.cases__container {
-    width: 100%;
-    background: url(../img/underline-title.jpg) center 14% no-repeat;
-}
-
 .cases__container h2 {
-    text-align: center;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
     color: #263244;
-    padding: 105px 0px 70px 0px;
+    margin-top: 108px;
 }
 
-.casses__undertext {
-    text-align: center;
+.case__example{
+    margin: 50px auto;
 }
 
-.casses__imgs {
-    margin: 40px 367px;
+.case__example>img{
+    width: 100%;
+    height: auto;
 }
 
-.client__container {
-    width: 1136px;
-    margin-left: 388px;
-}
-
-.client__box {
-    float: left;
-    margin-right: 104px;
-}
-
-.client__container h3 {
+.client__box h3, .project__name {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #263244;
-    padding: 15px 0px;
+    color: #263244
 }
 
 .client {
+    font-family: FranklinGot, sans-serif;
+    font-weight: bold;
     color: #3f495a;
+}
+
+.client__name{
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
 }
 
 .project__discription {
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
     color: #3f495a;
     line-height: 20px;
-    padding-bottom: 80px;
 }
 
-.project__link {
-    margin: 22px 0px;
+.project__link, .calc__sub {
+    margin: 22px 0px 80px 0px;
     font-size: 15px;
     padding: 9px 22px;
-    background: #63b5ae;
-    border: 2px solid #63b5ae;
+    background: #00b6af;
+    border: 2px solid #00b6af;
     border-radius: 5px;
     color: #fff;
-    text-transform: uppercase;
+    transition: all 0.2s ease;
+    transform: scale(1);
 }
 
-.price__container {
-    width: 100%;
+.calc__sub:hover{
+    background: #344051;
+    color: #fff;
+}
+
+.calc__sub:active{
+    transform: scale(1.1);
+}
+
+.project__link:hover{
+    background: #344051;
+    color: #fff;
+}
+
+.project__link:active{
+    transform: scale(1.1);
+}
+
+.price__container{
+    margin: 50px 0 40px;
+}
+
+.price__shadow{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .price__container h2 {
-    margin: 200px 0px 54px 0px;
-    text-align: center;
+    margin-top: 50px;
     font-size: 30px;
     font-weight: bold;
     color: #263244;
@@ -358,17 +380,10 @@ main {
     margin-bottom: 154px;
 }
 
-.price__selections {
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #263244;
-}
-
-
-
 .price__select-names {
-    margin-bottom: 22px;
+    font-family: Calibri, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 .price__selects {
@@ -383,39 +398,46 @@ main {
     background-position-x: 850px;
 }
 
-.price__final {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #263244;
-    margin-top: 20px;
+.form-select{
+    font-family: Calibri, sans-serif;
+    color: #747474;
+    margin-bottom: 40px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    appearance: none;
+    background: #f1f1f1 url(../img/arrow-select.png) no-repeat right/15px;
+    background-position-x: 96%;
+}
+
+.underline__grey {
+    height: 2px;
+    width: 100%;
+    background: url(../img/underline-price.jpg) center no-repeat;
+}
+
+.calc__final{
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
 }
 
 .stats__container {
     width: 100%;
-    height: 50%;
-    background: url(../img/underline-title.png) center 30% no-repeat, url(../img/bg-stats.jpg) center no-repeat fixed;
+    height: auto;
+    background: url(../img/bg-stats.jpg) center no-repeat fixed;
+    padding-bottom: 50px;
+}
+
+.stats__container .underline{
+    margin-bottom: 70px;
 }
 
 .stats__container h2 {
-    text-align: center;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bold;
     color: #263244;
     padding-top: 85px;
-}
-
-.stats__boxes {
-    margin: 126px 0px 0px 255px;
-}
-
-.stats__box {
-    float: left;
-    text-align: center;
-    margin-left: 150px;
 }
 
 .stats__number {
@@ -434,9 +456,8 @@ main {
 
 .reviews__container {
     width: 100%;
-    height: 50%;
+    height: 600px auto;
     margin-top: 104px;
-    background: url(../img/underline-title.jpg) center 12% no-repeat, url(../img/review-pic.png) center 30% no-repeat;
 }
 
 .reviews__container h2 {
@@ -445,40 +466,58 @@ main {
     font-size: 30px;
     font-weight: bold;
     color: #263244;
+}
 
+.reviews__container .underline{
+    margin-bottom: 50px;
 }
 
 .reviews__text {
-    margin: 233px 0px 36px 570px;
-    width: 40%;
-    text-align: center;
+    font-family: Calibri, sans-serif;
+    letter-spacing: -1px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .reviewer {
-    text-align: center;
+    font-family: Calibri, sans-serif;
+    letter-spacing: -1px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
-.choice__box {
-    margin-left: 930px;
-    margin-top: 30px;
+.form-check{
+    margin-right: 0px;
+    margin-bottom: 40px;
 }
 
 .contacts__container {
-    background: url(../img/underline-title.png) center 22% no-repeat, url(../img/bg-contacts.jpg) center/cover no-repeat;
-    height: 80%;
+    background: url(../img/bg-contacts-no_social.jpg) center/cover no-repeat;
+    height: 630px auto;
+}
+
+.cases__container .underline{
+    margin-bottom: 35px;
 }
 
 .contacts__container h2 {
+    font-family: FranklinGot, sans-serif;
     padding-top: 106px;
-    text-align: center;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bold;
     color: #fff;
+    overflow: visible;
+}
+
+.contacts__container .underline{
+    margin-bottom: 35px;
 }
 
 .contacts__text {
-    margin-top: 68px;
+    font-family: Calibri, sans-serif;
     text-align: center;
     color: #fff;
 }
@@ -488,11 +527,8 @@ main {
 }
 
 .contacts__box {
+    margin-top: 20px;
     color: #fff;
-    display: inline-block;
-    text-align: center;
-    margin-left: 100px;
-    margin-top: 44px;
     line-height: 15px;
 }
 
@@ -510,21 +546,15 @@ main {
     color: #fff;
 }
 
-.contacts__inputs {
-    width: 40%;
-    margin-left: 30%;
-}
-
 .contacts__name {
-    width: 48.4%;
+    width: 100%;
     height: 33px;
     padding-left: 16px;
     background: #d2d6dc;
 }
 
 .contacts__email {
-    margin-left: 20px;
-    width: 48.4%;
+    width: 100%;
     height: 33px;
     padding-left: 16px;
     background: #d2d6dc;
@@ -547,6 +577,7 @@ main {
 }
 
 .contacts__button {
+    margin: 30px 0px 30px;
     height: 40px;
     text-align: center;
     border: 2px solid #fff;
@@ -555,7 +586,6 @@ main {
     color: #fff;
     font-size: 13px;
     padding: 0px 16px;
-    margin: 20px 14px 0px 897px;
     transform: scale(1);
     transition: all 0.2s;
 }
@@ -569,15 +599,16 @@ main {
     transform: scale(1.1);
 }
 
-.footer {
+footer {
     width: 100%;
-    height: 95px;
+    height: auto;
     background: #354051;
 }
 
 .footer__text {
-    text-align: center;
-    padding-top: 40px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    padding: 40px 0px 30px;
     color: #fff;
 }
 
@@ -650,3 +681,86 @@ main {
 .loaded .preloader {
     display: none;
 }
+
+@media (max-width: 991px) {
+
+    .title__container,
+    .title__container h4,
+    .title__container input {
+        color: #fff;
+        position: relative;
+        z-index: 3;
+    }
+
+    .title__container input {
+        border: 2px solid #fff;
+    }
+
+    main {
+        position: relative;
+    }
+
+    main::after {
+        z-index: 2;
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+
+
+    @keyframes titlemove {
+        0% {
+            margin-left: -100px;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            margin-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 575px){
+    .contacts__container .titles{
+           padding-top: 15px;
+       }
+   
+       .contacts__container .underline{
+           margin-bottom: 10px;
+       }
+   
+       .contacts__container textarea{
+           height: 102px;
+       }
+   
+       .contacts__button {
+           margin-top: 10px; 
+       }
+   }
+
+@media (max-width: 520px) {
+
+    .logo {
+        font-size: 16px;
+    }
+
+    #dropdownMenuLink{
+        margin-top: 15px;
+    }
+
+    .title__container h1 {
+        font-size: 54px;
+    }
+
+    
+}
+
