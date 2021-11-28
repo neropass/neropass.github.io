@@ -1,11 +1,12 @@
 $(document).ready(function() {
+
     $('a[href^="#"]').click(function () {
     let valHref = $(this).attr("href");
     $('html, body').animate({scrollTop: $(valHref).offset().top - 60 + "px"})
 });
+
 })
 
- 
 
 /*alert("Для расчёта цены сайта выберите нужные вам пункты.");
 
