@@ -9,8 +9,7 @@
     <meta name="robots" content="all">
     <meta property='og:title' content="Это моя первая страница...">
     <title>Дмитрий Мещеряков - Веб-разработчик</title>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index.js"></script>
+    
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -36,12 +35,12 @@
 
                                 <ul class="navigation__buttons">
 
-                                    <li><a href="#">Услуги</a></li>
-                                    <li><a href="#">Обо мне</a></li>
-                                    <li><a href="#">Кейсы</a></li>
-                                    <li><a href="#">Прайс</a></li>
-                                    <li><a href="#">Отзывы</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#about__me">Обо мне</a></li>
+                                    <li><a href="#skills">Услуги</a></li>
+                                    <li><a href="#cases">Кейсы</a></li>
+                                    <li><a href="#prices">Прайс</a></li>
+                                    <li><a href="#reviews">Отзывы</a></li>
+                                    <li><a href="#contacts">Контакты</a></li>
 
                                 </ul>
 
@@ -55,12 +54,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Услуги</a></li>
-                                    <li><a class="dropdown-item" href="#">Обо мне</a></li>
-                                    <li><a class="dropdown-item" href="#">Кейсы</a></li>
-                                    <li><a class="dropdown-item" href="#">Прайс</a></li>
-                                    <li><a class="dropdown-item" href="#">Отзывы</a></li>
-                                    <li><a class="dropdown-item" href="#">Контакты</a></li>
+                                    <li><a class="dropdown-item" href="#about__me">Обо мне</a></li>
+                                    <li><a class="dropdown-item" href="#skills">Услуги</a></li>
+                                    <li><a class="dropdown-item" href="#cases">Кейсы</a></li>
+                                    <li><a class="dropdown-item" href="#prices">Прайс</a></li>
+                                    <li><a class="dropdown-item" href="#reviews">Отзывы</a></li>
+                                    <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -69,6 +68,7 @@
             </div>
         </nav>
     </header>
+
     <main>
         <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -84,7 +84,7 @@
         </div>
     </main>
 
-    <div class="bio__container">
+    <div class="bio__container" id="about__me">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -127,7 +127,7 @@
         </div>
     </div>
 
-    <div class="skills__container">
+    <div class="skills__container" id="skills">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-xxl-2 col-xl-3">
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    <div class="cases__container">
+    <div class="cases__container" id="cases">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-2 col-sm-3 text-center">
@@ -231,7 +231,7 @@
         </div>
     </div>
 
-    <div class="price__container">
+    <div class="price__container" id="prices">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10">
@@ -391,7 +391,7 @@
         </div>
     </div>
 
-    <div class="reviews__container">
+    <div class="reviews__container" id="reviews">
         <div class="container">
 
             <div class="row justify-content-center text-center">
@@ -449,7 +449,7 @@
         </div>
     </div>
 
-    <div class="contacts__container">
+    <div class="contacts__container" id="contacts">
         .<div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-xl-3">
@@ -533,6 +533,7 @@
         </div>
     </footer>
 
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 </body>

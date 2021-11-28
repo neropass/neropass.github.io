@@ -1,4 +1,13 @@
-alert("Для расчёта цены сайта выберите нужные вам пункты.");
+$(document).ready(function() {
+    $('a[href^="#"]').click(function () {
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 60 + "px"})
+});
+})
+
+ 
+
+/*alert("Для расчёта цены сайта выберите нужные вам пункты.");
 
 let siteType = prompt('Выберите из предложенных нужный вам тип сайта и напишите его номер:\n1 - Сайт-визитка (+1000 рублей и +3 дня)\n2 - Корпоративный сайт (+2000 рублей и +7 дня)\n3 - Интернет магазин (+4000 рублей и +14 дня)\n4 - Блог (+1000 рублей и +3 дня).', "");
 
@@ -9,6 +18,7 @@ let siteAdaptive = prompt('Выберите из предложенных нуж
 let priceResult = +0;
 
 let timeResult = +0;
+
 
 function calcPrice() {
 
@@ -78,4 +88,5 @@ function calcPrice() {
 
 calcPrice();
 
-alert(`Сроки выполнения и цена  вашего сайте: ${timeResult} дней и ${priceResult} рублей.`);
+alert(`Сроки выполнения и цена  вашего сайте: ${timeResult} дней и ${priceResult} рублей.`);*/
+
