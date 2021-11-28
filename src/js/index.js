@@ -1,14 +1,33 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('a[href^="#"]').click(function () {
-    let valHref = $(this).attr("href");
-    $('html, body').animate({scrollTop: $(valHref).offset().top - 60 + "px"})
-});
+    $(window).scroll(() => {
+        let scrollDistance = $(window).scrollTop();
+
+        $(".section").each((i, el) => {
+
+            if($(el).offset().top - $("nav").outerHeight()  <= scrollDistance) {
+                $("nav a").each((i, el) => {
+                    if ($(el).hasClass("active__btn")) {
+                        $(el).removeClass("active__btn");
+                    }
+                });
+
+                $('nav li:eq('+ i +')').find('a').addClass('active__btn');
+            }
+        });
+    });
+
+    $('a[href^="#"]').click(function() {
+        let valHref = $(this).attr("href");
+        $('html, body').animate({scrollTop: $(valHref).offset().top - 60 + "px"});
+    });
 
 })
 
 
 /*alert("Для расчёта цены сайта выберите нужные вам пункты.");
+
+Убрать prompt, сделать калькулятор с привязкой селекторов на сайте 
 
 let siteType = prompt('Выберите из предложенных нужный вам тип сайта и напишите его номер:\n1 - Сайт-визитка (+1000 рублей и +3 дня)\n2 - Корпоративный сайт (+2000 рублей и +7 дня)\n3 - Интернет магазин (+4000 рублей и +14 дня)\n4 - Блог (+1000 рублей и +3 дня).', "");
 
@@ -90,4 +109,3 @@ function calcPrice() {
 calcPrice();
 
 alert(`Сроки выполнения и цена  вашего сайте: ${timeResult} дней и ${priceResult} рублей.`);*/
-

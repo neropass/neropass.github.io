@@ -24,6 +24,19 @@ body {
     font-family: FranklinGot, sans-serif;
 }
 
+.navbar{
+    height: 60px;
+    background-color: #344051;
+}
+
+.navbar>button{
+    background-color: #fff;
+}
+
+.nav__menu>a {
+    color: #fff;
+}
+
 .navigation {
     height: 60px;
     background-color: #344051;
@@ -58,7 +71,6 @@ body {
 .navigation__buttons>li {
     float: left;
     line-height: 60px;
-    color: #fff;
     margin-left: 35px;
     font-size: 14px;
     text-transform: uppercase;
@@ -70,7 +82,7 @@ body {
     opacity: 0;
 }
 
-.navigation__buttons>li:active {
+.navigation__buttons li:active {
     transform: scale(1.1);
 }
 
@@ -94,20 +106,22 @@ body {
     animation-delay: 2s;
 }
 
-.navigation__buttons li a {
+.navigation__buttons>li>a {
     font-family: FranklinGot, sans-serif;
     transition: all 0.1s;
     color: #fff;
     text-decoration: none;
 }
 
-.navigation__buttons li a:visited {
-    color: #fff;
-}
-
 .navigation__buttons li a:hover {
     color: #e88604;
 }
+
+.active__btn{
+    color: #e88604 !important; 
+}
+
+
 
 @keyframes topshift {
     from {
@@ -121,11 +135,18 @@ body {
     }
 }
 
-.nav__menu>a {
-    color: #fff;
+/* .section{
+    height: 62px;
 }
 
+.section:first-child{
+    height: 0px;
+} */
+
+
+
 main {
+    position: relative;
     width: 100%;
     height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
@@ -254,7 +275,7 @@ main {
 .skills__container {
     background: url(../img/bg-skills.jpg) center/cover no-repeat;
     width: 100%;
-    padding-bottom: 50px;
+    
 }
 
 .skills__container h2 {
@@ -291,7 +312,7 @@ main {
     text-transform: uppercase;
     font-weight: bold;
     color: #263244;
-    margin-top: 108px;
+    margin-top: 70px;
 }
 
 .case__example {
@@ -362,7 +383,11 @@ main {
 }
 
 .price__container {
-    margin: 50px 0 40px;
+    margin-bottom: 40px;
+}
+
+.price__container>.container{
+    margin-top: 50px;
 }
 
 .price__shadow {
@@ -541,7 +566,7 @@ main {
 
 .contacts__container h3 {
     margin-top: 38px;
-    margin-bottom: 45px;
+    margin-bottom: 120px;
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
@@ -575,9 +600,9 @@ main {
     scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .contacts__button {
     margin: 30px 0px 30px;
