@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'FranklinGot';
     src: url('../fonts/framd.eot');
-    src: local('☺'), url('../fonts/framd.woff') format('woff'), url('../fonts/framd.ttf') format('truetype'), url('../fonts/framd.svg') format('svg'), ;
+    src: local('☺'), url('../fonts/framd.woff') format('woff'), url('../fonts/framd.ttf') format('truetype'), url('../fonts/framd.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,15 +18,12 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 600;
     background-color: #fff;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .titles {
     font-family: FranklinGot, sans-serif;
-}
-
-.navbar{
-    height: 60px;
-    background-color: #344051;
 }
 
 .navbar>button{
@@ -121,8 +118,6 @@ body {
     color: #e88604 !important; 
 }
 
-
-
 @keyframes topshift {
     from {
         opacity: 0;
@@ -135,13 +130,13 @@ body {
     }
 }
 
-/* .section{
-    height: 62px;
+.section{
+    height: 70px;
 }
 
 .section:first-child{
     height: 0px;
-} */
+}
 
 
 
@@ -383,12 +378,10 @@ main {
 }
 
 .price__container {
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 
-.price__container>.container{
-    margin-top: 50px;
-}
 
 .price__shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -516,6 +509,7 @@ main {
     line-height: 20px;
 }
 
+
 .form-check {
     margin-right: 0px;
     margin-bottom: 40px;
@@ -600,9 +594,9 @@ main {
     scrollbar-width: none;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .contacts__button {
     margin: 30px 0px 30px;
@@ -639,6 +633,84 @@ footer {
     padding: 40px 0px 30px;
     color: #fff;
 }
+
+/* Style the Image Used to Trigger the Modal */
+#case__image1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+#case__image1:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 70%;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption1, #caption2, #caption3 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 20px 0;
+    height: auto;
+  }
+ 
+  /* Add Animation - Zoom in the Modal */
+.modal-content, #caption1, #caption2, #caption3 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+.close1, .close2, .close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+.close1:hover,.close2:hover,.close3:hover, .close1:focus, .close2:focus,.close3:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+.modal-content {
+      width: 100%;
+    }
+  }
 
 .preloader {
     /*фиксированное позиционирование*/
