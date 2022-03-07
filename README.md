@@ -1,2 +1,2 @@
-# Дмитрий Мещеряков
-Мой первый сайт
+# Dmitriy Meshcheryakov
+My first site
